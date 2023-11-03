@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+    - shell: bash
+      env:
+        DockerUsername: ${{ secrets.DOCKERUSERNAME }}
+        DockerEmail: ${{ secrets.DOCKEREMAIL }}
+        DockerPassword: ${{ secrets.DOCKERPASSWORD }}
+      run: |
+        docker build . --file Dockerfile --tag reshadhabibzai/custom-nginx-plus-efs:$(date +%s)
+        docker login --username="$DockerUsername" --email="$DockerEmail" --password="$DockerPassword"
+        docker push reshadhabibzai/custom-nginx-plus-efs:latest
