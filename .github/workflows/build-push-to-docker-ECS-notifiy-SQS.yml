@@ -53,7 +53,7 @@ jobs:
           IMAGE_NAME="157363554348.dkr.ecr.us-west-2.amazonaws.com/brewedawakening:latest"
           IMAGE_VERSION="latest"
           MESSAGE="$IMAGE_NAME:$IMAGE_VERSION"
-          aws sqs send-message --queue-url "YOUR_SQS_QUEUE_URL" --message-body "$MESSAGE"
+          aws sqs send-message --queue-url "https://sqs.us-west-2.amazonaws.com/157363554348/github-workflow-ecr-auto-pull-and-run-on-ecs" --message-body "$MESSAGE"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
