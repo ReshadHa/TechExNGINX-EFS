@@ -40,9 +40,7 @@ jobs:
 
       - name: Amazon ECR login
         id: login-ecr
-        run: |
-          aws-region="${{ secrets.AWS_REGION }}"
-          aws ecr get-login-password --region $aws-region | docker login --username AWS --password-stdin 157363554348.dkr.ecr.us-west-2.amazonaws.com
+        run: aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 157363554348.dkr.ecr.us-west-2.amazonaws.com
 
       - name: Tag the Docker image for ECR
         run: docker tag reshadhabibzai/custom-nginx-plus-efs:latest 157363554348.dkr.ecr.us-west-2.amazonaws.com/brewedawakening:latest
