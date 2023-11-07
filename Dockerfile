@@ -7,5 +7,8 @@ FROM nginx:latest
 #Copy our http content into the container
 COPY html /usr/share/nginx/html
 
+#Copy the json specifically
+COPY html/coffee-menu.json /usr/share/nginx/html
+
 #Expose port 80 for http coms
 EXPOSE 80
