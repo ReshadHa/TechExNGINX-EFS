@@ -2,7 +2,7 @@ name: Notify SQS
 
 on:
   workflow_run:
-    workflows: ["build-push-to-docker-ECS-notify-SQS"]
+    workflows: ["build-push-to-docker-ECS"]
     types:
       - completed
 
