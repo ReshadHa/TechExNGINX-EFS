@@ -1,7 +1,10 @@
 name: Notify SQS
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["build-push-to-docker-ECS"]  # Specify the name of the build-push-to-docker-ECS workflow
+    types:
+      - completed
 
 jobs:
   notify-sqs:
