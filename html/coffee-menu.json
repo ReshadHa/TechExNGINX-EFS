@@ -14,10 +14,5 @@
     {
         "name": "Mocha",
         "available": true
-    },
-    {
-        "name": "Ash (goob x3001)",
-        "available": false
     }
-
 ]
