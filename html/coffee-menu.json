@@ -5,11 +5,11 @@
     },
     {
         "name": "Cappuccino",
-        "available": false
+        "available": true
     },
     {
         "name": "Latte",
-        "available": false
+        "available": true
     },
     {
         "name": "Mocha",
