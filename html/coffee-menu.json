@@ -9,7 +9,7 @@
     },
     {
         "name": "Latte",
-        "available": true
+        "available": false
     },
     {
         "name": "Mocha",
