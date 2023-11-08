@@ -1,7 +1,7 @@
 [
     {
         "name": "Espresso",
-        "available": false
+        "available": true
     },
     {
         "name": "Cappuccino",
