@@ -1,18 +1,18 @@
 [
     {
         "name": "Espresso",
-        "available": true
+        "available": false
     },
     {
         "name": "Cappuccino",
-        "available": true
+        "available": false
     },
     {
         "name": "Latte",
-        "available": true
+        "available": false
     },
     {
         "name": "Mocha",
-        "available": true
+        "available": false
     }
 ]
